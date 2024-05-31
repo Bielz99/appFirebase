@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "979359776977",
+    "project_id": "flutter-horas",
+    "storage_bucket": "flutter-horas.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:979359776977:android:d04057bb8dd082d09a85f0",
+        "android_client_info": {
+          "package_name": "com.example.app_firebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4ghP2elC76FhuHFet-ACgesIG5bPI2ig"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
