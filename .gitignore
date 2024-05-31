@@ -42,5 +42,5 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 /lib/firebase_options.dart
-/android/appgoogle-services.json
+/android/app/google-services.json
 C:\Users\Solot\appFirebase\firebase.json
