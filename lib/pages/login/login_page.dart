@@ -1,4 +1,5 @@
 import 'package:app_firebase/pages/register/register_page.dart';
+import 'package:app_firebase/services/auth_service.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -6,6 +7,8 @@ class LoginPage extends StatelessWidget {
 
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+
+  AuthService authService = AuthService();
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +52,25 @@ class LoginPage extends StatelessWidget {
                     ),
                     const SizedBox(height: 16),
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        authService
+                            .login(
+                          _emailController.text,
+                          _passwordController.text,
+                        )
+                            .then(
+                          (String? erro) {
+                            if (erro != null) {
+                              final snackBar = SnackBar(
+                                content: Text(erro),
+                                backgroundColor: Colors.red,
+                              );
+                              ScaffoldMessenger.of(context)
+                                  .showSnackBar(snackBar);
+                            }
+                          },
+                        );
+                      },
                       child: const Text('Entrar'),
                     ),
                     const SizedBox(height: 16),
